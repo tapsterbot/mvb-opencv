@@ -1,10 +1,11 @@
 import mvb
 
 proc main() =
+  echo "Running MVB (🖥️ 👁️ 📒) Demo..."
   var frame: Mat
 
   # Create a GUI window
-  namedWindow "MVB - OpenCV Demo"
+  #namedWindow "MVB - OpenCV Demo"
 
   # Open the camera by callling the constructor
   let cap = newVideoCapture()
@@ -15,7 +16,7 @@ proc main() =
     # Start getting and showing frames
     while true:
       # Grab frame from camera
-      cap.read(frame)
+      cap.read frame
 
       # Display the frame
       imshow "MVB - OpenCV Demo", frame
@@ -27,7 +28,6 @@ proc main() =
   # Close the camera
   cap.release
   echo "👑"
-
 
 when isMainModule:
   main()

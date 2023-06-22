@@ -1,4 +1,4 @@
-import cppstl/std_string
+import cppstl/std_string, cppstl/std_vector
 
 #{.passl: "-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_videoio".}
 
@@ -78,11 +78,14 @@ const
   CAP_REALSENSE* = CAP_INTELPERC ## !< Synonym for CAP_INTELPERC
 
 # imgcodecs
-proc imread*(file: cstring, mode: ImreadModes = IMREAD_COLOR): Mat
+proc imread*(filename: cstring, mode: ImreadModes = IMREAD_COLOR): Mat
   {.importcpp: "cv::imread(@)", header: imgcodecs.}
 
-proc imwrite*(file: cstring, mat : Mat): bool
+proc imwrite*(filename: cstring, img : Mat): bool
   {.importcpp: "cv::imwrite(@)", header: imgcodecs, discardable.}
+
+proc imencode*(ext: cstring, img: Mat, buf: CppVector[uint8]): bool
+  {.importcpp: "cv::imencode(@)", header: imgcodecs, discardable.}
 
 # highgui
 proc namedWindow*(winname: cstring, flags : WindowFlags = WINDOW_AUTOSIZE)

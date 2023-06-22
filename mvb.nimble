@@ -12,8 +12,14 @@ backend       = "cpp"
 requires "nim >= 1.6.12"
 requires "cppstl"
 
+task i, "\t\tRun INim interpreter configured to use MVB":
+  exec "inim -d:--backend:cpp -d:'--passL:\"-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_videoio\"'"
+
 task demo, "\t\tRun the demo":
-  exec "nim cpp -r examples/demo.nim"
+  exec "nim cpp -r --hints:off examples/demo.nim"
+
+task web_demo, "\t\tRun the web demo":
+  exec "nim cpp -r --hints:off examples/webdemo.nim"
 
 task test, "\t\tRun the test suite":
   exec "nim cpp -r --hints:off tests/test1.nim"
