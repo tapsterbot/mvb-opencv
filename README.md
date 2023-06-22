@@ -27,10 +27,21 @@ nimble install mvb
 ```
 
 ## Demo
+
+First, check out the code
+```bash
+git clone https://github.com/tapsterbot/mvb-opencv.git
+cd mvb-opencv
+```
+
+Then run this demo...
+(Using OpenCV's built-in GUI)
 ```bash
 nimble demo
 ```
 
+Or this demo...
+(Viewable in any browser at http://127.0.0.1:8080/
 ```bash
 nimble webdemo
 ```
