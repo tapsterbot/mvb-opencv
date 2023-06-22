@@ -3,24 +3,43 @@ Minimum Viable Bindings to OpenCV for Nim
 
 ## Installation
 
+### Prerequisite: Install OpenCV
+
+#### Linux (Debian/Ubuntu)
 ```bash
-$ nimble install mvb
+sudo apt install libopencv-dev
+```
+
+#### macOS
+```bash
+homebrew install opencv
+```
+
+#### Windows
+```bash
+choco install opencv
+```
+
+
+### Install MVB
+```bash
+nimble install mvb
 ```
 
 ## Demo
 ```bash
-$ nimble demo
+nimble demo
 ```
 
 ```bash
-$ nimble webdemo
+nimble webdemo
 ```
 
 ## Interactive Demo
 
 ### Read from camera
 ```bash
-$ nimble i
+nimble i
 
 nim> import mvb
 nim> var frame: Mat
@@ -35,7 +54,7 @@ nim>
 
 ### Read from file
 ```bash
-$ nimble i
+nimble i
 
 nim> import mvb
 nim> const imagePath = "tests/img/nim-logo.png"
@@ -47,7 +66,7 @@ nim>
 
 ### Write to file
 ```bash
-$ nimble i
+nimble i
 
 nim> import os
 nim> import mvb
