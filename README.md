@@ -48,6 +48,11 @@ nimble webdemo
 
 ## Interactive Demo
 
+**Interactive Nim (INim) is required**
+```bash
+nimble install inim
+```
+
 ### Read from camera
 ```bash
 nimble i
