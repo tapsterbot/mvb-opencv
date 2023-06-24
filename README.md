@@ -1,6 +1,8 @@
 # mvb
 Minimum Viable Bindings to OpenCV for Nim
 
+These are new bindings compatible with the latest version of OpenCV. (4.7.x as of today.) MVB stands for "Minimum Viable Bindings" and/or "Machine Vision Bindings" (🖥️👁️📒). The library is minimal at the moment, but it can read and display from the camera, and read/write and encode files. These are the absolute minimum features required for a viable OpenCV binding. The plan is to keep improving the bindings until MVB is an acronym for "Maximum Viable Bindings".
+
 ## Installation
 
 ### Prerequisite: Install OpenCV
