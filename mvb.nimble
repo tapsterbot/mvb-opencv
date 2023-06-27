@@ -18,12 +18,15 @@ task i, "\t\tRun INim interpreter configured to use MVB":
 task demo, "\t\tRun the demo":
   exec "nim cpp -r --hints:off examples/demo.nim"
 
-task web_demo, "\t\tRun the web demo":
+task web_demo, "\tRun the web demo":
   exec "nim cpp -r --hints:off examples/webdemo.nim"
 
 task test, "\t\tRun the test suite":
   exec "nim cpp -r --hints:off tests/test1.nim"
   exec "nim cpp -r --hints:off tests/test2.nim"
+
+task gendoc, "\t\tGenerate the documentation":
+  exec "nim doc --backend:cpp --git.url:https://github.com/tapsterbot/mvb-opencv --git.commit:v0.1.0 --outdir:docs src/mvb.nim"
 
 import distros
 when defined(nimdistros):

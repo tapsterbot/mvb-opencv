@@ -128,7 +128,7 @@ proc length*(this: String): uint
   {.importcpp: "#.length()", header: string, discardable.}
   ## Get length of String
 
-############################################################
+#-------------------------------------------------------------
 # Holdover from "nimble init"
 proc add*(x, y: int): int =
   ## Adds two files together.
