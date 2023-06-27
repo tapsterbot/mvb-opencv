@@ -62,7 +62,7 @@ nimble i
 nim> import mvb
 nim> var frame: Mat
 nim> let cap = newVideoCapture()
-nim> for i in countup(1,100):
+nim> for i in 1 .. 100:
 ....   cap.read frame
 ....   imshow "MVB - OpenCV Demo", frame
 ....   waitKey(5)
@@ -76,7 +76,7 @@ nimble i
 
 nim> import mvb
 nim> const imagePath = "tests/img/nim-logo.png"
-nim> var img: Mat = imread imagePath
+nim> var img = imread imagePath
 nim> imshow "MVB - OpenCV Demo", img
 nim> waitKey(0)
 nim>
@@ -90,7 +90,7 @@ nim> import os
 nim> import mvb
 nim> const imagePath = "tests/img/nim-logo.png"
 nim> const imageResultPath = "tests/img/nim-logo.test.png"
-nim> var img: Mat = imread imagePath
+nim> var img = imread imagePath
 nim>
 nim> fileExists imageResultPath
 false == type bool
